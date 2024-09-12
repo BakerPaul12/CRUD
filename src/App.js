@@ -1,20 +1,11 @@
-import React, { useState } from 'react';
-import ProductForm from './components/ProductForm';
-import ProductList from './components/ProductList';
+import React from 'react';
+import CampaignList from './components/CampaignList';
 
-const App = () => {
-    const [refresh, setRefresh] = useState(false);
-
-    const handleSave = () => {
-        setRefresh(!refresh);
-    };
-
-    return (
-        <div>
-            <ProductForm onSave={handleSave} />
-            <ProductList key={refresh} /> {}
-        </div>
-    );
-};
+const App = () => (
+    <div>
+        <h1>Product Campaign Manager</h1>
+        <CampaignList />
+    </div>
+);
 
 export default App;
