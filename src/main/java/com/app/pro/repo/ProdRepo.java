@@ -6,5 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProdRepo extends JpaRepository<Product, Long> {
-    // Możesz tutaj dodawać dodatkowe metody, np. szukanie po nazwie
 }
