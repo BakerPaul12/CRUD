@@ -22,7 +22,7 @@ const ProductList = () => {
     const handleDelete = (id) => {
         axios.delete(`http://localhost:8080/api/products/${id}`)
             .then(() => {
-                fetchProducts(); // Odśwież listę produktów po usunięciu
+                fetchProducts();
             })
             .catch(error => {
                 console.error("There was an error deleting the product!", error);
@@ -36,8 +36,8 @@ const ProductList = () => {
     const handleSaveEdit = () => {
         axios.put(`http://localhost:8080/api/products/${editingProduct.id}`, editingProduct)
             .then(() => {
-                setEditingProduct(null); // Zamknij tryb edycji
-                fetchProducts(); // Odśwież listę produktów
+                setEditingProduct(null);
+                fetchProducts();
             })
             .catch(error => {
                 console.error("There was an error updating the product!", error);

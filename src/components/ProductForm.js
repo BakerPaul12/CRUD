@@ -14,8 +14,8 @@ const ProductForm = ({ onSave }) => {
         axios.post('http://localhost:8080/api/products', product)
             .then(response => {
                 console.log("Product added successfully:", response.data);
-                setProduct({ name: '', description: '', price: 0 }); // Resetowanie formularza
-                onSave(); // Wywołanie funkcji, aby odświeżyć listę produktów
+                setProduct({ name: '', description: '', price: 0 });
+                onSave();
             })
             .catch(error => {
                 console.error("There was an error adding the product!", error);
